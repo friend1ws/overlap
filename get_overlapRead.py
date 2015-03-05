@@ -20,13 +20,16 @@ for line in inFile:
     row = line.rstrip('\n')
     F = row.split('\t')
 
+    # select properly aligned paired reads and non-supplementary and non-duplicated
     flags = format(int(F[1]), '#014b')[:1:-1]
     if flags[0] == 0 or flags[1] == 0 or flags[2] == 1 or flags[3] == 1 or flags[8] == 1 or flags[10] == 1 or flags[11] == 1:
         continue
 
+    # skip the read with mapping quality below the specified value
     if F[4] < mapQ:
         continue
 
+    # skip the read having some indels or soft clipping
     if cigarRe.match(F[5]) is None:
         continue
 
