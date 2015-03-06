@@ -108,16 +108,12 @@ while True:
 
         # check for the inconsistency
         if dir1 == dir2:
-            print F1
-            print F2
             print flags1, flags2
             print dir1, dir2
             print "inconsistency of the alignment direction!"
             sys.exit()
 
         if readNum1 == readNum2:
-            print F1
-            print F2
             print flags1, flags2
             print readNum1, readNum2
             print "inconsistency of the readNumber"
@@ -157,20 +153,12 @@ while True:
         elif readNum1 == 2 and readNum2 == 1:
             print "\t".join([chr, str(misPos), ref, alt2, alt1, str(cycle2), str(cycle1), nuc2, nuc1, baseQ2, baseQ1, key2, key1, ID])
         else:
-            print F1
-            print F2
+            print flags1, flags2 
             print readNum1, readNum2
             print "inconsistency of the readNumber"
             sys.exit()
    
-    # print row1 
-    # print row2
-    # print misPosList
-
 
 inFile.close()
 
-"""
-HWI-ST1289:327:H8VFCADXX:2:1114:2143:21750  163 chr1    13352245    47  161M    =   13352269    185 CCTGCTCCCCAGAGGCCATGAGTAAAAGGCAGACAGTGGAGGACTGTCCAAGGATGGGAGAGTGCCAGCCCTTGAAGGTGTTCATAGACCGCTGCCTAAAGAAAAGTACACTGGATGAATGCCTGAGCTACCTCTGTGGGTAGATCCACTACAGAAGAGGT   CCCFFFFFGHHHHIBEHGIJCHAFHHICFHIIIGHGGHG>DF@DCA8DGEFHEEEHHC=55;.=EH;?BDAEECEDDD5;A?ADCDCDCCBB@BBBDDDCD@AC?C4:ACDDCBCCCDCCCDC>CA?CAACCCCCCAADD9C04@CC>?>9?>ACDA>BB#   NM:i:0  MD:Z:161    AS:i:161    XS:i:156
-"""
 
