@@ -8,7 +8,7 @@ inputFile = sys.argv[1]
 mapQ = sys.argv[2]
 overlapDist = int(sys.argv[3])
 
-memDist = 1000
+memDist = overlapDist 
 
 inFile = open(inputFile, "r")
 ID2row = {}
@@ -54,3 +54,4 @@ for line in inFile:
         ID2chr[F[0]] = F[2]
         ID2pos[F[0]] = int(F[3])
 
+inFile.close()
