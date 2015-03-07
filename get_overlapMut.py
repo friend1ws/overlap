@@ -149,9 +149,9 @@ while True:
 
         # print the result
         if readNum1 == 1 and readNum2 == 2:
-            print "\t".join([chr, str(misPos), ref, alt1, alt2, str(cycle1), str(cycle2), nuc1, nuc2, baseQ1, baseQ2, key1, key2, ID])
+            print "\t".join([chr, str(misPos - 1), str(misPos), ref, alt1, alt2, str(cycle1), str(cycle2), nuc1, nuc2, baseQ1, baseQ2, key1, key2, ID])
         elif readNum1 == 2 and readNum2 == 1:
-            print "\t".join([chr, str(misPos), ref, alt2, alt1, str(cycle2), str(cycle1), nuc2, nuc1, baseQ2, baseQ1, key2, key1, ID])
+            print "\t".join([chr, str(misPos - 1), str(misPos), ref, alt2, alt1, str(cycle2), str(cycle1), nuc2, nuc1, baseQ2, baseQ1, key2, key1, ID])
         else:
             print flags1, flags2 
             print readNum1, readNum2
